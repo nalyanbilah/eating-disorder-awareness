@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deserve and Embrace Your Happiness - ED Awareness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #1B5E3F;
+            --dark-green: #0F3825;
+            --light-cream: #FAF9F6;
+            --warm-orange: #FF8B4A;
+            --soft-yellow: #FFD93D;
+            --light-blue: #6BCF7F;
+            --text-dark: #2D2D2D;
+            --text-light: #6B6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-cream);
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 1.2rem 5%;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .logo img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: var(--primary-green);
+            color: white !important;
+            padding: 0.6rem 1.8rem;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(27, 94, 63, 0.2);
+        }
+
+        .cta-nav:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(27, 94, 63, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 4rem 5%;
+            background: white;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(107, 207, 127, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            line-height: 1.1;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero-quote {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            padding-left: 1.5rem;
+            border-left: 4px solid var(--warm-orange);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .primary-btn {
+            background: var(--primary-green);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 20px rgba(27, 94, 63, 0.3);
+        }
+
+        .primary-btn:hover {
+            background: var(--dark-green);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(27, 94, 63, 0.4);
+        }
+
+        .secondary-btn {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .secondary-btn:hover {
+            gap: 0.8rem;
+        }
+
+        /* Hero Images Grid */
+        .hero-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .image-card {
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            height: 280px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .image-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .image-card:nth-child(1) { 
+            background: var(--soft-yellow);
+            grid-column: 1;
+            grid-row: 1;
+        }
+        
+        .image-card:nth-child(2) { 
+            background: var(--light-blue);
+            grid-column: 2;
+            grid-row: 1;
+        }
+        
+        .image-card:nth-child(3) { 
+            background: var(--warm-orange);
+            grid-column: 1;
+            grid-row: 2;
+        }
+        
+        .image-card:nth-child(4) { 
+            background: var(--primary-green);
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        /* Stats Banner */
+        .stats-banner {
+            background: var(--primary-green);
+            color: white;
+            padding: 3rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+        }
+
+        .stats-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* About Section - UPDATED WITH IMAGES */
+        .about-section {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        .section-label {
+            color: var(--warm-orange);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* ED Types Grid - UPDATED WITH IMAGES */
+        .ed-types-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .ed-card {
+            background: var(--light-cream);
+            padding: 0;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ed-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .ed-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .ed-card-content {
+            padding: 2rem;
+        }
+
+        .ed-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .ed-card-list {
+            list-style: none;
+            color: var(--text-dark);
+        }
+
+        .ed-card-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .ed-card-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--warm-orange);
+            font-weight: bold;
+        }
+
+        /* Symptoms Section - UPDATED WITH ICONS */
+        .symptoms-section {
+            padding: 5rem 5%;
+            background: var(--light-cream);
+        }
+
+        .symptoms-grid {
+            max-width: 1300px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .symptom-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--warm-orange);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .symptom-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .symptom-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .symptom-card:nth-child(1) .symptom-icon { 
+            background: rgba(255, 217, 61, 0.2); 
+            color: #FFB300; 
+        }
+        .symptom-card:nth-child(2) .symptom-icon { 
+            background: rgba(107, 207, 127, 0.2); 
+            color: #4CAF50; 
+        }
+        .symptom-card:nth-child(3) .symptom-icon { 
+            background: rgba(255, 139, 74, 0.2); 
+            color: #FF7043; 
+        }
+        .symptom-card:nth-child(4) .symptom-icon { 
+            background: rgba(27, 94, 63, 0.2); 
+            color: var(--primary-green); 
+        }
+
+        .symptom-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 0.8rem;
+        }
+
+        .symptom-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* PSA Video Section */
+        .psa-section {
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .psa-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-30%, -30%) rotate(180deg); }
+        }
+
+        .psa-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .psa-section .section-title {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .video-container {
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .play-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            color: var(--primary-green);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        /* Balanced Eating Section - UPDATED WITH IMAGES */
+        .balanced-section {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .eating-tips-grid {
+            max-width: 1300px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tip-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .tip-card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .tip-card-content {
+            padding: 2rem;
+            background: var(--light-cream);
+        }
+
+        .tip-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .tip-list {
+            list-style: none;
+            color: var(--text-dark);
+        }
+
+        .tip-list li {
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .tip-list li::before {
+            content: '✓';
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-top: 2px;
+        }
+
+        /* Support Section - UPDATED WITH ICONS */
+        .support-section {
+            padding: 5rem 5%;
+            background: var(--light-cream);
+        }
+
+        .support-grid {
+            max-width: 1300px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .support-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--warm-orange), var(--soft-yellow));
+        }
+
+        .support-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .support-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--light-cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary-green);
+        }
+
+        .support-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+
+        .support-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .help-btn {
+            background: var(--warm-orange);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .help-btn:hover {
+            background: #E57A3A;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 139, 74, 0.3);
+        }
+
+        /* Inspirational Section */
+        .inspiration-section {
+            padding: 5rem 5%;
+            background: white;
+            position: relative;
+        }
+
+        .stories-container {
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+
+        .story-card {
+            background: linear-gradient(135deg, var(--light-cream) 0%, white 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .story-quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .story-quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 4rem;
+            color: var(--warm-orange);
+            opacity: 0.3;
+        }
+
+        .story-author {
+            font-weight: 600;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+        }
+
+        .share-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .share-btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .share-btn:hover {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        /* References Section */
+        .references-section {
+            padding: 5rem 5%;
+            background: var(--dark-green);
+            color: white;
+        }
+
+        .references-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .references-section .section-title {
+            color: white;
+            text-align: center;
+        }
+
+        .reference-list {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .reference-list h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--soft-yellow);
+        }
+
+        .reference-list ul {
+            list-style: none;
+        }
+
+        .reference-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-green);
+            color: white;
+            padding: 4rem 5% 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .footer-quote {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-images {
+                grid-template-columns: 1fr 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .image-card {
+                height: 200px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--primary-green);
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                Eating Disorder Awareness
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#symptoms">Symptoms</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#contact" class="cta-nav">Get Help</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <h1>Deserve and Embrace Your Happiness</h1>
+                <p class="hero-subtitle">Awareness & Understanding Eating Disorders</p>
+                <p class="hero-quote">"They may smile on the outside. But inside, they are slowly disappearing."</p>
+                <div class="hero-buttons">
+                    <a href="#psa" class="primary-btn">
+                        <span>▶</span> Watch PSA Video
+                    </a>
+                    <a href="#learn" class="secondary-btn">
+                        Learn More <span>→</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-images fade-in">
+                <div class="image-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1682437015963-dcfbb1ab5500?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Person in yellow">
+                </div>
+                <div class="image-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1675138030303-38bb4d58a851?q=80&w=986&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Person in green">
+                </div>
+                <div class="image-card">
+                    <img src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Person in orange">
+                </div>
+                <div class="image-card">
+                    <img src="https://plus.unsplash.com/premium_photo-1681210062502-59ed49221e28?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Person in teal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+        <div class="stats-container">
+            <div class="stat-item fade-in">
+                <h3>100%</h3>
+                <p>recovery is possible with proper support</p>
+            </div>
+            <div class="stat-item fade-in">
+                <h3>70M+</h3>
+                <p>people affected worldwide</p>
+            </div>
+            <div class="stat-item fade-in">
+                <h3>24/7</h3>
+                <p>help available when you need it</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - WITH IMAGES -->
+    <section id="about" class="about-section">
+        <div class="section-header fade-in">
+            <p class="section-label">Understanding</p>
+            <h2 class="section-title">What Are Eating Disorders?</h2>
+            <p class="section-desc">Eating disorders are serious mental health conditions characterized by persistent disturbances in eating behaviors, thoughts, and emotions. They affect people of all ages, genders, and backgrounds.</p>
+        </div>
+
+        <div class="ed-types-grid">
+            <div class="ed-card fade-in">
+                <img src="https://thebridgemarbella.com/wp-content/uploads/2024/02/How-to-Help-People-Suffering-From-Anorexia.jpg" alt="Anorexia awareness" class="ed-card-image">
+                <div class="ed-card-content">
+                                        <h3>Anorexia Nervosa</h3>
+                    <ul class="ed-card-list">
+                        <li>Extreme restriction of food intake</li>
+                        <li>Intense fear of gaining weight</li>
+                        <li>Distorted body image perception</li>
+                        <li>Dangerously low body weight</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ed-card fade-in">
+                <img src="https://cdn.ukat.co.uk/sites/ukat/wp-content/uploads/2024/01/bulimia.png" alt="Bulimia awareness" class="ed-card-image">
+                <div class="ed-card-content">
+                    <h3>Bulimia Nervosa</h3>
+                    <ul class="ed-card-list">
+                        <li>Recurrent binge eating episodes</li>
+                        <li>Compensatory behaviors (purging)</li>
+                        <li>Self-evaluation based on body shape</li>
+                        <li>Feeling out of control during binges</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ed-card fade-in">
+                <img src="https://wibehavioralhealth.com/wp-content/uploads/2024/07/for-website.png" alt="Binge eating awareness" class="ed-card-image">
+                <div class="ed-card-content">
+                    <h3>Binge Eating Disorder</h3>
+                    <ul class="ed-card-list">
+                        <li>Eating large amounts rapidly</li>
+                        <li>Eating when not physically hungry</li>
+                        <li>Feelings of guilt and shame</li>
+                        <li>No regular compensatory behaviors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Symptoms Section - WITH ICONS -->
+    <section id="symptoms" class="symptoms-section">
+        <div class="section-header fade-in">
+            <p class="section-label">Recognition</p>
+            <h2 class="section-title">Signs & Symptoms</h2>
+            <p class="section-desc">Early recognition can save lives. Look out for these warning signs in yourself or loved ones.</p>
+        </div>
+
+        <div class="symptoms-grid">
+            <div class="symptom-card fade-in">
+                <div class="symptom-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h4>Physical Signs</h4>
+                <p>Dramatic weight changes, fatigue, dizziness, feeling cold, hair loss, dental problems</p>
+            </div>
+
+            <div class="symptom-card fade-in">
+                <div class="symptom-icon">
+                    <i class="fas fa-running"></i>
+                </div>
+                <h4>Behavioral Signs</h4>
+                <p>Skipping meals, excessive exercise, frequent bathroom visits after eating, rigid eating patterns</p>
+            </div>
+
+            <div class="symptom-card fade-in">
+                <div class="symptom-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h4>Emotional Signs</h4>
+                <p>Anxiety around food, body image concerns, mood swings, depression, social isolation</p>
+            </div>
+
+            <div class="symptom-card fade-in">
+                <div class="symptom-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Social Signs</h4>
+                <p>Avoiding social meals, wearing baggy clothes, withdrawing from friends and activities</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- PSA Video Section -->
+<section id="psa" class="psa-section">
+    <div class="psa-content fade-in">
+        <p class="section-label" style="color: var(--soft-yellow);">Message</p>
+        <h2 class="section-title">Our PSA Video</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">Understanding the hidden struggles through powerful storytelling and symbolism</p>
+        
+        <div class="video-container">
+            <div class="play-button" id="playButton">▶</div>
+            <p style="margin-top: 1.5rem;">Click to watch our awareness video</p>
+            
+            <!-- Hidden iframe that will be shown when play is clicked -->
+            <iframe id="videoFrame" 
+                    src="" 
+                    style="display: none; width: 100%; height: 400px; border: none; border-radius: 10px; margin-top: 1rem;"
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+        <p style="max-width: 600px; margin: 2rem auto; line-height: 1.8;">This video aims to shed light on the internal battles faced by those with eating disorders, helping viewers understand the signs and encourage seeking help.</p>
+    </div>
+</section>
+
+    <!-- Balanced Eating Section - WITH IMAGES -->
+    <section class="balanced-section">
+        <div class="section-header fade-in">
+            <p class="section-label">Recovery</p>
+            <h2 class="section-title">Path to Balanced Eating</h2>
+            <p class="section-desc">Healing your relationship with food is a journey. Here are some guiding principles.</p>
+        </div>
+
+        <div class="eating-tips-grid">
+            <div class="tip-card fade-in">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=200&fit=crop" alt="Nutritional balance" class="tip-card-image">
+                <div class="tip-card-content">
+                    <h3>Nutritional Balance</h3>
+                    <ul class="tip-list">
+                        <li>Include all food groups in meals</li>
+                        <li>Eat at regular intervals</li>
+                                                <li>Honor your hunger and fullness</li>
+                        <li>No foods are "good" or "bad"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip-card fade-in">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=200&fit=crop" alt="Mindful eating" class="tip-card-image">
+                <div class="tip-card-content">
+                    <h3>Mindful Eating</h3>
+                    <ul class="tip-list">
+                        <li>Eat without distractions</li>
+                        <li>Savor flavors and textures</li>
+                        <li>Practice gratitude for food</li>
+                        <li>Listen to your body's needs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip-card fade-in">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop" alt="Body positivity" class="tip-card-image">
+                <div class="tip-card-content">
+                    <h3>Body Positivity</h3>
+                    <ul class="tip-list">
+                        <li>Appreciate what your body can do</li>
+                        <li>Focus on health, not weight</li>
+                        <li>Challenge negative thoughts</li>
+                        <li>Celebrate non-physical qualities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section - WITH ICONS -->
+    <section id="support" class="support-section">
+        <div class="section-header fade-in">
+            <p class="section-label">Help</p>
+            <h2 class="section-title">Support & Resources</h2>
+            <p class="section-desc">You don't have to face this alone. Help is available.</p>
+        </div>
+
+        <div class="support-grid">
+            <div class="support-card fade-in">
+                <div class="support-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Crisis Hotline</h3>
+                <p>24/7 confidential support for immediate help and crisis intervention</p>
+                <a href="tel:0376272929" class="help-btn">Call 03-76272929</a>
+            </div>
+
+            <div class="support-card fade-in">
+                <div class="support-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3>Support Groups</h3>
+                <p>Connect with others who understand your journey in a safe, supportive environment</p>
+                <a href="#groups" class="help-btn">Find Groups</a>
+            </div>
+
+            <div class="support-card fade-in">
+                <div class="support-icon">
+                    <i class="fas fa-hospital-user"></i>
+                </div>
+                <h3>Professional Help</h3>
+                <p>Access specialized treatment centers, therapists, and medical professionals</p>
+                <a href="#treatment" class="help-btn">Get Help</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inspirational Section -->
+    <section class="inspiration-section">
+        <div class="section-header fade-in">
+            <p class="section-label">Hope</p>
+            <h2 class="section-title">Stories of Recovery</h2>
+            <p class="section-desc">Real stories from real people who have walked this path</p>
+        </div>
+
+        <div class="stories-container">
+            <div class="story-card fade-in">
+                <p class="story-quote">Recovery taught me that I am so much more than my eating disorder. Today, I help others find their strength too.</p>
+                <p class="story-author">- Sarah, 5 years in recovery</p>
+            </div>
+
+            <div class="story-card fade-in">
+                <p class="story-quote">The journey wasn't easy, but finding support changed everything. You deserve to heal and be happy.</p>
+                <p class="story-author">- Marcus, recovery advocate</p>
+            </div>
+        </div>
+
+        <div class="share-buttons fade-in">
+            <a href="#" class="share-btn">Share Your Story</a>
+            <a href="#" class="share-btn">Read More Stories</a>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="references-section">
+        <div class="references-container fade-in">
+            <h2 class="section-title">References & Further Reading</h2>
+            
+            <div class="reference-list">
+                <h3>Academic Sources</h3>
+                <ul>
+                    <li>World Health Organization. (2023). ICD-11 for Mortality and Morbidity Statistics: Feeding and Eating Disorders.</li>
+                    <li>National Eating Disorders Association. (2023). Statistics & Research on Eating Disorders.</li>
+                    <li>American Psychiatric Association. (2022). Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR).</li>
+                    <li>Journal of Eating Disorders. (2023). "Prevalence and correlates of eating disorders among Generation Z: A systematic review and meta-analysis."</li>
+                    <li>International Journal of Eating Disorders. (2023). "Digital interventions for eating disorder recovery in young adults."</li>
+                    <li>Clinical Psychology Review. (2022). "Body image and social media use among adolescents and young adults."</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="footer-quote">You deserve to be happy. You deserve to be free. Recovery is possible.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Use</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#resources">Resources</a>
+            </div>
+            <p style="opacity: 0.7; margin-top: 2rem;">© 2025 Eating Disorder Awareness Campaign</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255,255,255,0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.95)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Play button interaction
+        const playButton = document.querySelector('.play-button');
+        if (playButton) {
+            playButton.addEventListener('click', function() {
+                // In a real implementation, this would open a video modal or redirect to video
+                alert('Video player would open here. This is a placeholder for the PSA video.');
+            });
+        }
+
+        // Add hover effect to cards
+        const cards = document.querySelectorAll('.ed-card, .symptom-card, .support-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroImages = document.querySelector('.hero-images');
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (heroImages && scrolled < window.innerHeight) {
+                heroImages.style.transform = `translateY(${scrolled * 0.5}px)`;
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+        });
+
+        // Counter animation for stats
+        function animateCounter(el, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                el.textContent = Math.floor(current) + (el.textContent.includes('%') ? '%' : 
+                                 el.textContent.includes('M') ? 'M+' : '/7');
+            }, 30);
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                    entry.target.classList.add('animated');
+                    const statNumber = entry.target.querySelector('h3');
+                    const value = parseInt(statNumber.textContent);
+                    animateCounter(statNumber, value);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-item').forEach(stat => {
+            statsObserver.observe(stat);
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '1';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const playButton = document.getElementById('playButton');
+    const videoFrame = document.getElementById('videoFrame');
+    
+    // Convert Google Drive share link to embeddable format
+    const driveFileId = '1tPu-XHteZng-eGOICNXCxcfajQJYf2xx';
+    const embedUrl = `https://drive.google.com/file/d/${driveFileId}/preview`;
+    
+    playButton.addEventListener('click', function() {
+        // Hide the play button
+        playButton.style.display = 'none';
+        
+        // Set the iframe source and show it
+        videoFrame.src = embedUrl;
+        videoFrame.style.display = 'block';
+        
+        // Optional: Hide the "Click to watch" text
+        const clickText = playButton.nextElementSibling;
+        if (clickText && clickText.tagName === 'P') {
+            clickText.style.display = 'none';
+        }
+    });
+});
+    </script>
+
+    <style>
+        /* Additional styles for interactions */
+        .nav-links.active {
+            display: flex !important;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            flex-direction: column;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        body {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .keyboard-nav *:focus {
+            outline: 3px solid var(--warm-orange);
+            outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+            nav, footer, .cta-nav, .primary-btn, .secondary-btn {
+                display: none;
+            }
+            
+            .hero {
+                min-height: auto;
+                margin-top: 0;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-green: #0A2818;
+                --warm-orange: #CC5500;
+            }
+            
+            .card, .support-card, .ed-card {
+                border: 2px solid currentColor;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</body>
+</html>
